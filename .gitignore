@@ -1,0 +1,21 @@
+
+
+./history
+/.history
+
+# .gitignore
+
+# Environment variables
+.env
+./eventx/.env
+*/.env
+/eventx/.env
+# Ignore environment variable files
+.env.local
+
+# VS Code history folder
+.history/
+# Ignore all files in the .history directory
+.history/*
+# Ignore all files in the history directory
+history/

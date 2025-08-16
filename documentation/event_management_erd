@@ -1,0 +1,23 @@
+// Event Management System ER Diagram
+digraph EventManagementERD {
+	rankdir=LR splines=ortho
+	node [fontname=Helvetica shape=record style=rounded]
+	edge [fontname=Helvetica fontsize=10]
+	USER [label="{USER |<UserID> int UserID (PK)\nstring Username\nstring Email\nstring PasswordHash\nstring Role\nstring ProfileImageURL}"]
+	EVENT [label="{EVENT |<EventID> int EventID (PK)\n<OrganizerID> int OrganizerID (FK)\n<CategoryID> int CategoryID (FK)\n<VenueID> int VenueID (FK)\nstring Title\nstring Description\ndatetime StartDate\ndatetime EndDate\nint TotalCapacity}"]
+	VENUE [label="{VENUE |<VenueID> int VenueID (PK)\n<CityID> int CityID (FK)\nstring Name\nstring Address\nint Capacity}"]
+	CITY [label="{CITY |<CityID> int CityID (PK)\nstring Name}"]
+	CATEGORY [label="{CATEGORY |<CategoryID> int CategoryID (PK)\nstring Name}"]
+	TICKET [label="{TICKET |<TicketID> int TicketID (PK)\n<EventID> int EventID (FK)\nstring Type\nfloat Price\nint QuantityAvailable}"]
+	BOOKING [label="{BOOKING |<BookingID> int BookingID (PK)\n<UserID> int UserID (FK)\n<EventID> int EventID (FK)\ndatetime BookingDate\nint NumberOfTickets\nfloat TotalPrice}"]
+	REVIEW [label="{REVIEW |<ReviewID> int ReviewID (PK)\n<UserID> int UserID (FK)\n<EventID> int EventID (FK)\nint Rating\nstring Comment\ndatetime DatePosted}"]
+	USER:UserID -> EVENT:OrganizerID [label=Organizes arrowhead=crow arrowtail=tee]
+	USER:UserID -> BOOKING:UserID [label=Makes arrowhead=crow arrowtail=tee]
+	USER:UserID -> REVIEW:UserID [label=Writes arrowhead=crow arrowtail=tee]
+	EVENT:EventID -> TICKET:EventID [label=Has arrowhead=crow arrowtail=tee]
+	EVENT:EventID -> BOOKING:EventID [label=Receives arrowhead=crow arrowtail=tee]
+	EVENT:EventID -> REVIEW:EventID [label=Gets arrowhead=crow arrowtail=tee]
+	VENUE:VenueID -> EVENT:VenueID [label=Hosts arrowhead=crow arrowtail=tee]
+	CITY:CityID -> VENUE:CityID [label="Located in" arrowhead=crow arrowtail=tee]
+	CATEGORY:CategoryID -> EVENT:CategoryID [label="Belongs to" arrowhead=crow arrowtail=tee]
+}

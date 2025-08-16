@@ -1,0 +1,244 @@
+%-------------------------
+% Resume in Latex
+% Author : Abey George
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsNames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{graphicx}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+\RequirePackage{tikz}
+\RequirePackage{xcolor}
+\RequirePackage{fontawesome}
+\usepackage{tikz}
+\usetikzlibrary{svg.path}
+
+
+\definecolor{cvblue}{HTML}{0E5484}
+\definecolor{black}{HTML}{130810}
+\definecolor{darkcolor}{HTML}{0F4539}
+\definecolor{cvgreen}{HTML}{3BD80D}
+\definecolor{taggreen}{HTML}{00E278}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{name}{black}
+\colorlet{tagline}{darkcolor}
+\colorlet{heading}{darkcolor}
+\colorlet{headingrule}{cvblue}
+\colorlet{accent}{darkcolor}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+% \pagestyle{fancy}
+% \fancyhf{} % clear all header and footer fields
+% \fancyfoot{}
+% \renewcommand{\headrulewidth}{0pt}
+% \renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+ \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+ \item\small{
+{#1 \vspace{-2pt}}
+ }
+}
+
+\newcommand{\classesList}[4]{
+\item\small{
+{#1 #2 #3 #4 \vspace{-2pt}}
+ }
+}
+
+\newcommand{\resumeSubheading}[4]{
+ \vspace{-2pt}\item
+\begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+ \textbf{\large#1} & \textbf{\small #2} \\
+ \textit{\large#3} & \textit{\small #4} \\
+
+\end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+\item
+\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+ \textit{\small#1} & \textit{\small #2} \\
+\end{tabular*}\vspace{-7pt}
+}
+
+
+\newcommand{\resumeProjectHeading}[2]{
+\item
+\begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+ \small#1 & \textbf{\small #2}\\
+\end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+
+\newcommand\sbullet[1][.5]{\mathbin{\vcenter{\hbox{\scalebox{#1}{$\bullet$}}}}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+
+
+\begin{center}
+{\Huge \scshape Vijay Gholve} \\ \vspace{1pt}
+Pune, Maharashtra, India \\ \vspace{1pt}
+{\raisebox{-0.2\height}\faLinkedinSquare\ \href{https://www.linkedin.com/in/vijay-gholve-a28b6a2a1/}{linkedin.com/in/vijay-gholve-a28b6a2a1/}} ~
+\href{https://github.com/vijayholve}{\raisebox{-0.2\height}\faGithub\ github.com/vijayholve} \\ \vspace{1pt} % Added a new line here for better spacing
+\small \href{tel:+918080028963}{ \raisebox{-0.1\height}\faPhone\ +91-8080028963} ~ \href{mailto:vijaygholve77v@gmail.com}{\raisebox{-0.2\height}\faEnvelope\ vijaygholve77v@gmail.com} ~
+
+\end{center}
+
+% Optional: Uncomment and fill this section if you want a summary
+% \section{SUMMARY}
+% \begin{itemize}[leftmargin=0.15in, label={}]
+%     \small{\item{
+%         Aspiring Full Stack Developer with strong foundations in Python, Django, and React, eager to build impactful web applications. Proven ability to develop robust backend APIs and dynamic frontends through diverse project experience.
+%     }}
+% \end{itemize}
+% \vspace{-15pt}
+
+\section{TECHNICAL SKILLS}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+\small{\item{
+\textbf{Backend:} Python, Django, Django REST Framework, Redis, MySQL \\
+\textbf{Frontend:} React, JavaScript, HTML5, CSS3, Bootstrap \\
+\textbf{Version Control:} Git, GitHub \\
+\textbf{Tools & Methodologies:} Postman, VS Code, Agile/Scrum (if applicable)
+}}
+ \end{itemize}
+ \vspace{-15pt}
+
+
+%-----------EDUCATION-----------
+
+
+ \section{EDUCATION}
+ \resumeSubHeadingListStart
+\resumeSubheading
+ {SPPU, SM Joshi College Pune}{2023 – 2026}
+ {BCA - Computer Application - \textbf{CGPA}: \textbf{8.5/10}}{} % Removed redundant location
+ \resumeSubHeadingListEnd
+%-----------PROJECTS-----------
+
+\section{PROJECTS}
+\vspace{-5pt}
+\resumeSubHeadingListStart
+ \resumeProjectHeading
+ {\href{}{\textbf{\large{College Management System}}} $|$ \large{\underline{Django, React, REST Framework, Redis, MySQL}}}{2024}\\
+ \resumeItemListStart
+ \resumeItem{\normalsize{Developed a comprehensive platform for college management (attendance, exams, assignments, feedback), streamlining administrative tasks.}}
+ \resumeItem{\normalsize{Implemented robust user authentication and role-based access for students, teachers, and admins, ensuring data security.}}
+ \resumeItem{\normalsize{Designed a calendar-based attendance system with real-time updates and notifications, enhancing tracking accuracy and communication.}}
+ \resumeItem{\normalsize{Built high-performance RESTful APIs using Django REST Framework for seamless and efficient data exchange.}}
+ \resumeItem{\normalsize{Integrated Redis for caching, significantly enhancing application performance and reducing data retrieval times.}}
+ \resumeItem{\normalsize{Developed a responsive and dynamic frontend using React, providing an intuitive and accessible user experience.}}
+ \resumeItemListEnd
+ \vspace{-13pt}
+
+ \resumeProjectHeading
+ {\href{}{\textbf{\large{E-commerce Website}}} $|$ \large{\underline{Django, React, REST Framework, Redis, MySQL}}}{2024}\\
+ \resumeItemListStart
+ \resumeItem{\normalsize{Created a fully functional e-commerce platform with features including product listings, cart, and secure checkout.}}
+ \resumeItem{\normalsize{Implemented intuitive category and search filters, significantly improving product discoverability and user experience.}}
+ \resumeItem{\normalsize{Designed and integrated a secure payment gateway for seamless and reliable online transactions.}}
+ \resumeItem{\normalsize{Developed efficient APIs using Django REST Framework for managing products, users, and orders.}}
+ \resumeItem{\normalsize{Integrated Redis for faster query responses and session management, reducing page load times.}}
+ \resumeItem{\normalsize{Built an attractive and user-friendly frontend with React and responsive design principles, ensuring cross-device compatibility.}}
+ \resumeItemListEnd
+ \vspace{-13pt}
+\resumeProjectHeading
+ {\href{}{\textbf{\large{MLM Platform (Multi-Level Marketing System)}}} $|$ \large{\underline{Django, React, REST Framework, MySQL}}}{2025}\\
+ \resumeItemListStart
+\resumeItem{\normalsize{Built a scalable MLM platform enabling user registration, referral tracking, and commission earnings through a multi-level system.}}
+\resumeItem{\normalsize{Implemented complex tree-based user hierarchy logic to efficiently manage downline structures and accurately calculate commissions.}}
+\resumeItem{\normalsize{Designed and integrated secure authentication with unique referral codes, streamlining user onboarding.}}
+\resumeItem{\normalsize{Developed robust APIs using Django REST Framework to manage users, transactions, and real-time referral tracking.}}
+\resumeItem{\normalsize{Created a dynamic React-based dashboard to visualize earnings, referrals, and team performance, providing clear insights.}}
+\resumeItem{\normalsize{Optimized database queries and structures for real-time performance and accurate level-wise payouts.}}
+ \resumeItemListEnd
+ \vspace{-13pt}
+
+ \resumeProjectHeading
+ {\href{}{\textbf{\large{Event Management System}}} $|$ \large{\underline{Django, React, REST Framework, MySQL}}}{2025}\\
+ \resumeItemListStart
+ \resumeItem{\normalsize{Developed a full-stack platform for comprehensive event management, from creation and registration to attendee tracking.}}
+ \resumeItem{\normalsize{Implemented features for event categorization, search, and filtering, enhancing user discoverability and navigation.}}
+ \resumeItem{\normalsize{Designed a robust registration system with attendee management and secure ticket generation capabilities.}}
+ \resumeItem{\normalsize{Utilized Django REST Framework to create secure and efficient APIs for event data, user interactions, and bookings.}}
+ \resumeItem{\normalsize{Built a responsive user interface with React, providing an intuitive experience for both organizers and attendees.}}
+ \resumeItem{\normalsize{Integrated notification systems for timely event updates and reminders to registered participants.}}
+ \resumeItemListEnd
+ \vspace{-13pt}
+
+\resumeSubHeadingListEnd
+\vspace{-0pt}
+
+ \end{document}

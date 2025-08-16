@@ -1,0 +1,15 @@
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #5a5a5a, #333);
+}
+
+.login-page .MuiTextField-root {
+  margin-bottom: 20px;
+}
+
+.login-page .MuiButton-root {
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 1px;
+}
