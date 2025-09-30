@@ -31,7 +31,7 @@ const CompactCards = () => {
 
   return (
     <div className="p-6 bg-gray-100 min-h-screen">
-      <h1 className="text-3xl font-bold text-gray-800 mb-8">Trending Events</h1>{" "}
+      {/* <h1 className="text-3xl font-bold text-gray-800 mb-8">Trending Events</h1>{" "} */}
       {/* Changed heading */}
       {loading ? (
         <Loading />
@@ -118,7 +118,13 @@ const CompactCards = () => {
                   {/* Event Title */}
                   <NavLink
                     to={`/events/${event.id}`}
-                    className="text-xl font-bold text-gray-800 mb-2 truncate"
+                    className="text-xl font-bold text-gray-800 mb-2 truncate
+                    hover:text-indigo-600 transition-colors 
+                    
+
+
+                    
+                    "
                   >
                     {event.title}
                   </NavLink>

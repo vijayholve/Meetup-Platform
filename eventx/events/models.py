@@ -183,3 +183,9 @@ class IndividualTicket(models.Model):
     # You can add a method here to generate the QR code data string
     def get_qr_data(self):
         return str(self.unique_id) # Simple UUID as QR data
+    
+
+
+
+
+

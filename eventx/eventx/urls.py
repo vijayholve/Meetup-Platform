@@ -13,6 +13,8 @@ urlpatterns = [
     path('siteconfig/',include('SiteConfig.urls')),
         path('api/tickets/',include('qrCode.urls')),
 
+        path('api/dashboard/',include('Dashboard.urls')),
+
 ]
 if settings.DEBUG:
     urlpatterns += static(

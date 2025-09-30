@@ -53,7 +53,8 @@ INSTALLED_APPS = [
     'vendors.apps.VendorsConfig',
     'events.apps.EventsConfig',
     'SiteConfig', # Assuming this is a custom app
-    'accounts', # Assuming this is a custom app
+    'accounts', # Assuming this is a custom app ,
+    'Dashboard',
 ]
 
 # in settings.py
@@ -137,9 +138,14 @@ USE_TZ = True
 STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CORS_ALLOW_ALL_ORIGINS = True
-CORS_ALLOWED_ORIGINS =[
-    "http://localhost:5173"
+CORS_ALLOW_ALL_ORIGINS = True  # Only for development
+CORS_ALLOW_CREDENTIALS = True
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:5173",  # Vite default port
+    "http://127.0.0.1:5173",
+    "http://localhost:3000",  # React default port
+    "http://127.0.0.1:3000",
 ]
 
 REST_FRAMEWORK = {

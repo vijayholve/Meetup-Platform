@@ -1,10 +1,12 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Bell, Menu } from "lucide-react";
 import { useEventContext } from "../../context/EventContext";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import Nav_link from "./nav-link";
 import SelectOption from "../form/select/Select";
 import SearchInput from "../form/input.jsx/SearchInput";
+import { logout } from "../../features/auth/authSlice";
+import { useDispatch } from "react-redux";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,7 +15,14 @@ const Navbar = () => {
   const [searchQuery, setSearchQuery] = useState("");
 
   const { events,filteredEvents, setFilteredEvents, categories, cities } = useEventContext();
-
+const dispatch = useDispatch();
+  const navigate = useNavigate();
+  
+  
+  const handleLogout = () => {
+    dispatch(logout());
+    navigate("/login");
+  };
   // Set all events initially
   useEffect(() => {
     setFilteredEvents(events);
@@ -139,6 +148,14 @@ const Navbar = () => {
               3
             </span>
           </NavLink>
+           <button
+              onClick={() => {
+                handleLogout();
+              }}
+              className="mt-4 w-full text-left text-red-600 hover:text-red-800 font-medium"
+            >
+              Logout
+            </button>
         </div>
       )}
     </nav>

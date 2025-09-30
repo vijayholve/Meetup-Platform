@@ -1,13 +1,23 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { Link, useNavigate } from "react-router-dom";
+import { logout } from "../../features/auth/authSlice";
 
 const Header = ({
   title = "Dashboard",
   subtitle = "",
   link = "/",
   icon = "bi bi-house-door",
-  link_text = "Go Back",
+  link_text = "Create User",
 }) => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  
+  
+  const handleLogout = () => {
+    dispatch(logout());
+    navigate("/login");
+  };
   return (
     <header className=" top-0 z-40 bg-white shadow-sm border-b px-4 md:px-8 py-3">
       <div className="flex items-center justify-between">
@@ -32,7 +42,15 @@ const Header = ({
           >
             <i className="bi bi-arrow-left" />
             {link_text}
-          </Link>
+          </Link> 
+           <button
+              onClick={() => {
+                handleLogout();
+              }}
+              className="mt-4 w-full text-left text-red-600 hover:text-red-800 font-medium"
+            >
+              Logout
+            </button>
         </div>
       </div>
     </header>
