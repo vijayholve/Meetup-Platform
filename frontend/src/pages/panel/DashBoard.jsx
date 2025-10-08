@@ -71,9 +71,8 @@ const DashBoard = () => {
       </div>
 
       {/* Charts Section - Improved Layout */}
-      <div className="row mt-4">
+      <div className="row mt-4 p-9">
         {/* First Row - Two Charts Side by Side */}
-        <div className="col-lg-6 col-md-12 mb-3">
           <div className="card shadow-sm">
             <div className="card-header bg-light">
               <h6 className="card-title mb-0">
@@ -85,9 +84,9 @@ const DashBoard = () => {
               <EventRegistrationChart />
             </div>
           </div>
-        </div>
+          </div>
 
-        <div className="col-lg-6 col-md-12 mb-3">
+        <div className="row mt-8 p-9 ">
           <div className="card shadow-sm">
             <div className="card-header bg-light">
               <h6 className="card-title mb-0">
@@ -95,15 +94,16 @@ const DashBoard = () => {
                 Monthly Events
               </h6>
             </div>
-            <div className="card-body p-2" style={{ height: "300px" }}>
+            <div className="card-body p-2" style={{ height: "300px"  , 
+            margin:"10px"
+            }}>
               <MonthlyEventsChart />
             </div>
           </div>
         </div>
-      </div>
 
       {/* Second Row - User Stats Chart (Smaller Width) */}
-      <div className="row mt-3">
+      <div className="row mt-3 p-10 ">
         <div className="col-lg-8 col-md-10 mx-auto">
           <div className="card shadow-sm">
             <div className="card-header bg-light">
